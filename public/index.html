@@ -11,16 +11,16 @@
         <nav class =" w-9/12 flex flex-row mx-auto">
             <div class =" uppercase text-lg basis-1/4"><!-- logo -->
 
-              <a href="#hero">
+              
                 <span class =" font-extrabold text-white">Putra</span>
                 <span class ="font-extralight text-amber-800">Sanjaya</span>
-              </a>
+            
             </div>
               <div class ="basis-1/2 flex items-center justify-evenly "><!-- link -->
-            <a href="#services"><span>services</span></a>
-            <a href="#portofolio"><span>portofolios</span></a>
-            <a href=""><span>experiences</span></a>
-            <a href="#contact"><span>contact</span></a>
+            <a href="#home"><span>Home</span></a>
+            <a href="#about"><span>About</span></a>
+            <a href="#portofolio"><span>Portofolio</span></a>
+            <a href="#contact"><span>Contact</span></a>
               </div>
 
               <div class ="basis-1/4 flex justify-end"><!-- dark mode -->
@@ -34,7 +34,7 @@
     
    </header>
 
-   <main id="hero"  class=" relative-top-20"> <!-- main content-->
+   <main id="home"  class=" relative-top-20"> <!-- main content-->
    <div class=" bg-gray-950"><!-- Hero section -->
     <div class = "mx-auto flex h-screen items-center w-9/12 ">
         <div class ="basis-1/2 "><!-- deskripsi -->
@@ -63,93 +63,92 @@
     </div>
         </div>
 
-        <div class="basis-1/2"> <!-- avatar -->
-         <img class="mx-auto"src="img/avatar.png" alt = "foto saya">
+        <div class="w-30 h-30"> <!-- avatar -->
+         <img class="mx-auto rounded-lg w-30 h-30"src="" alt = "foto saya">
         </div>
         
         
     </div>
    </div>
-<div id="services" class=" bg-slate-50 pt-20 pb-20"> <!-- services-->
+   <div id="about" class="bg-slate-50 pt-20 pb-20">
     <div class="w-9/12 mx-auto">
-    <div class="flex flex-col place-items-center"> <!-- judul -->
-        <div class="flex items-center">
-
-            <svg class="stroke-gray-400 stroke-2 h-5 w-5">
-                <line x1="0" y1="10px" x2="10px" y2="10px">
-            </svg>
-               <h2 class="uppercase text-xs font-extralight tracking-lebihlebar"> services </h2>
+        <div class="flex flex-col place-items-center">
+            <div class="flex items-center">
+                <svg class="stroke-gray-400 stroke-2 h-5 w-5">
+                    <line x1="0" y1="10px" x2="10px" y2="10px">
+                </svg>
+                <h2 class="uppercase text-xs font-extralight tracking-lebihlebar"> About </h2>
+            </div>
+            <h3 class="text-3xl">
+                Education
+            </h3>
         </div>
-               <h3 class="text-3xl">
-                Specialized in
-               </h3>
-    
-    </div>
 
-
-        <div class="grid grid-cols-3 gap-10 py-10" ><!-- cards-->
-             <div class="rounded-lg bg white shadow-lg">
+        <!-- Kartu 1 -->
+        <div class="mb-10 shadow-lg">
+            <div class="rounded-lg bg-white shadow-lg">
                 <div class="flex flex-col items-center py-10 px-10">
                     <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
                         <img class="w-full" src="img/crown.svg" alt="">
                     </div>
                     <h4 class="text-black mt-5">
-                        UI/UX Design
+                        SDN 5 Banjar Jawa
                     </h4>
-                    <p class=" text-center font-extralight text-sm mt-2"> 
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                        Ipsa explicabo voluptas illo praesentium incidunt aperiam aspernatur
-                         neque expedita, repellat delectus 
-                        exercitationem nulla voluptates rem corrupti vitae rerum enim et 
-                        temporibus!
-                    </p>
+                   
                 </div>
-                
-             </div>
-                        <div class="shadow-lg"> <!-- Card 2 -->
-                            <div class="rounded-lg bg white shadow-lg">
-                                <div class="flex flex-col items-center py-10 px-10">
-                                    <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
-                                        <img class="w-full" src="img/app.svg" alt="">
-                                    </div>
-                                    <h4 class="text-black mt-5">
-                                        Application Development
-                                    </h4>
-                                    <p class=" text-center font-extralight text-sm mt-2"> 
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                        Ipsa explicabo voluptas illo praesentium incidunt aperiam aspernatur
-                                         neque expedita, repellat delectus 
-                                        exercitationem nulla voluptates rem corrupti vitae rerum enim et 
-                                        temporibus!
-                                    </p>
-                                </div>
-                                
-                             </div>
-                          </div>
-                 <div class="shadow-lg"><!-- Card 3 -->
-                    <div class="rounded-lg bg white shadow-lg">
-                        <div class="flex flex-col items-center py-10 px-10">
-                            <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
-                                <img class="w-full" src="img/globe.svg" alt="">
-                            </div>
-                                 <h4 class="text-black mt-5">
-                                 Standart Designing 
-                                 </h4>
-                             <p class=" text-center font-extralight text-sm mt-2"> 
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                Ipsa explicabo voluptas illo praesentium incidunt aperiam aspernatur
-                                 neque expedita, repellat delectus 
-                                exercitationem nulla voluptates rem corrupti vitae rerum enim et 
-                                temporibus!
-                             </p>
-                        </div>
-                        
-                     </div>
-                 </div>
-
+            </div>
+        </div>
+        
+        <!-- Kartu 2 -->
+        <div class="mb-10 shadow-lg">
+            <div class="rounded-lg bg-white shadow-lg">
+                <div class="flex flex-col items-center py-10 px-10">
+                    <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
+                        <img class="w-full" src="img/app.svg" alt="">
+                    </div>
+                    <h4 class="text-black mt-5">
+                        SMP N 1 Singaraja
+                    </h4>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Kartu 3 -->
+        <div class="mb-10 shadow-lg">
+            <div class="rounded-lg bg-white shadow-lg">
+                <div class="flex flex-col items-center py-10 px-10">
+                    <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
+                        <img class="w-full" src="img/globe.svg" alt="">
+                    </div>
+                    <h4 class="text-black mt-5">
+                        SMK N 3 Singaraja
+                    </h4>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <!-- Kartu 4 (Baru Ditambahkan) -->
+        <div class="mb-10 shadow-lg">
+            <div class="rounded-lg bg-white shadow-lg">
+                <div class="flex flex-col items-center py-10 px-10">
+                    <div class="h-10 w-10 p-2 bg-blue-100 rounded-2xl">
+                        <img class="w-full" src="img/your-image.svg" alt="">
+                    </div>
+                    <h4 class="text-black mt-5">
+                        Now,Undiksha
+                    </h4>
+                    
+                </div>
+            </div>
         </div>
     </div>
-    </div>
+</div>
+
+
+
+
 
     <div id="portofolio" class="py-40 bg-gray-950">
         <div class="w-9/12 mx-auto">
@@ -288,7 +287,7 @@
    <footer class="bg-white py-10"> <!-- footer -->
 
     <div class="container mx-auto text-center">
-        2023 Ucup Surucup. All rights reserved>
+        2023 Putra Sanjaya. All rights reserved>
     </div>
     
    </footer>
