@@ -6,9 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>Ideal Height and Weight Calculator</title>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-800 text-gray-500">
     <div id="app" class="container mx-auto p-4">
-        <h1 class="text-3xl text-center mb-4">Ideal Height and Weight Calculator</h1>
+        <h1 class="text-3xl text-center mb-4">Ideal Weight Calculator</h1>
         <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Enter Your Name:</label>
             <input
@@ -21,6 +21,12 @@
         <div v-if="name">
             <p class="text-lg font-bold">Hello, {{ name }}!</p>
             <div class="mt-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="calculationType">Select Calculation:</label>
+                <select v-model="calculationType" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300">
+                    <option value="weight">Ideal Weight</option>
+                </select>
+            </div>
+            <div v-if="calculationType === 'weight'" class="mt-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="height">Enter Height (in cm):</label>
                 <input
                     type="number"
@@ -28,14 +34,32 @@
                     class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
                     placeholder="Enter height in cm"
                 >
+                <button @click="calculateWeight" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded focus:outline-none hover:bg-blue-600">
+                    Calculate Ideal Weight
+                </button>
+                <div v-if="idealWeight !== null" class="mt-4">
+                    <p class="text-lg font-bold">Ideal Weight:</p>
+                    <p class="text-xl">{{ idealWeight }} kg</p>
+                    <!-- Add a "Save Data" button -->
+                    <button @click="saveResult" class="mt-2 px-4 py-2 bg-green-500 text-white rounded focus:outline-none hover:bg-green-600">
+                        Save Data
+                    </button>
+                </div>
             </div>
-            <button @click="calculateWeight" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded focus:outline-none hover:bg-blue-600">
-                Calculate Ideal Weight
-            </button>
-            <div v-if="idealWeight !== null" class="mt-4">
-                <p class="text-lg font-bold">Ideal Weight:</p>
-                <p class="text-xl">{{ idealWeight }} kg</p>
-            </div>
+        </div>
+
+        <!-- Display saved data -->
+        <div v-if="savedResults.length" class="mt-8">
+            <h2 class="text-2xl font-bold mb-2">Saved Results:</h2>
+            <ul>
+                <li v-for="(result, index) in savedResults" :key="index" class="mb-2">
+                    <span class="text-lg font-bold">{{ result.name }}:</span>
+                    <span>{{ result.idealWeight }} kg</span>
+                    <button @click="removeResult(index)" class="ml-2 px-2 py-1 bg-red-500 text-white rounded focus:outline-none hover:bg-red-600">
+                        Remove
+                    </button>
+                </li>
+            </ul>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
